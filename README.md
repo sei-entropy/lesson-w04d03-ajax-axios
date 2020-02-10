@@ -4,16 +4,17 @@
 # AJAX + Axios
 
 ## HTTP Recap
+
 [How The Internet Works in 5 Minutes](https://www.youtube.com/watch?v=7_LPdttKXPc)
 
 Let's define a few terms:
 
-- *server*: A server is software that processes HTTP requests and builds responses to be sent back to a client.
-- *client*: A client is software that makes HTTP requests and processes a server's response.
-- *request*: A message sent to a server which requests a document.
-- *response*: A message sent to a client which contains a document.
-- *protocol*: A rule or set of rules defining proper communication.
-How is the web different than the Internet?
+- _server_: A server is software that processes HTTP requests and builds responses to be sent back to a client.
+- _client_: A client is software that makes HTTP requests and processes a server's response.
+- _request_: A message sent to a server which requests a document.
+- _response_: A message sent to a client which contains a document.
+- _protocol_: A rule or set of rules defining proper communication.
+  How is the web different than the Internet?
 
 The Internet is a telecommunications network. All telecommunications networks—from telegraphs, through phone and radio, and to teletype—facilitate transmission of data from one point to another.
 
@@ -29,6 +30,7 @@ The World Wide Web (WWW, or simply "web") is a distributed, world-wide collectio
 ![http_requests](images/http_requests.png)
 
 ### Verbs
+
 URLs reveal the identity of the particular host with which we want to communicate, but the action that should be performed on the host is specified via HTTP verbs (or methods, as they are properly called). Of course, there are several actions that a client would like the host to perform. HTTP has formalised on a few that capture the essentials that are universally applicable for all kinds of applications.
 
 These request verbs are:
@@ -53,6 +55,7 @@ https://www.restapitutorial.com/lessons/httpmethods.html
 <br>
 
 ## API
+
 ![API](images/api2.png)
 
 In computer science API application programming interface is quite a broad term which can be confusing.
@@ -64,8 +67,9 @@ When we think about APIs within the context of web application development we ca
 It allows a programme to interface with a website over the internet so that it can use that websites' data.
 
 **Q: Why use api?**
->Why recreate data when we don't have to? Think about past projects or ideas that would be easier if you could pull in data already gathered elsewhere.
-APIs can provide us with data that we would otherwise not be able to create ourselves.
+
+> Why recreate data when we don't have to? Think about past projects or ideas that would be easier if you could pull in data already gathered elsewhere.
+> APIs can provide us with data that we would otherwise not be able to create ourselves.
 
 Many web sites have their own data, but they can pull in other data. For example, many news sites have a weather widget. This widget gets its data from a weather resource.
 
@@ -78,10 +82,7 @@ Let's check out a few API's:
 - [Pokemon API](https://pokeapi.co/)
 - [Game of Thrones API](https://anapioficeandfire.com/)
 
-
-
 <br>
-
 
 ## Postman
 
@@ -93,7 +94,7 @@ Postman is a tool to test and build APIs. It's super helpful to test requests th
 
 <br>
 
-##  API Requests
+## API Requests
 
 [Reqres.in Docs](https://reqres.in/)
 
@@ -135,31 +136,26 @@ JSON does not support:
 - comments.
 - methods.
 
->JSON is just one format that we can send and receive over the internet. There are some others like XML that you might see. However, JSON is the most common and the easiest to use.
-
+> JSON is just one format that we can send and receive over the internet. There are some others like XML that you might see. However, JSON is the most common and the easiest to use.
 
 ###### JSON Example
 
 ```json
 {
-     "firstName": "John",
-     "lastName": "Smith",
-     "address": {
-         "streetAddress": "21 2nd Street",
-         "city": "New York",
-         "state": "NY",
-         "postalCode": 10021
-     },
-     "phoneNumbers": [
-         "212 555-1234",
-         "646 555-4567"
-     ]
- }
+  "firstName": "John",
+  "lastName": "Smith",
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": 10021
+  },
+  "phoneNumbers": ["212 555-1234", "646 555-4567"]
+}
 ```
+
 We can add a [chrome extension](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to make JSON easier to read.
 <br>
-
-
 
 ## AJAX
 
@@ -173,6 +169,7 @@ AJAX just uses a combination of:
 - JavaScript and HTML DOM (to display or use the data)
 
 AJAX allows developers to:
+
 - Read data from a web server - after a web page has loaded
 - Update a web page without reloading the page
 - Send data to a web server - in the background
@@ -182,10 +179,10 @@ AJAX is a misleading name. AJAX applications might use XML to transport data, bu
 AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
 
 ##### XML and JSON
+
 Back in the day, APIs used to send data in XML format,which is where the X in AJAX comes from. However, JSON has become the predominant way to send data over the internet.
 
 Even though JSON has become the preferred method of data transfer, no one seems in a hurry to start calling AJAX AJAJ.
-
 
 When we will use AJAX, we will be sending and receiving JSON.
 Let's take a look at a few sites that use AJAX:
@@ -195,7 +192,7 @@ Let's take a look at a few sites that use AJAX:
 
 What would happen if we disabled javascript and tried to use those sites?
 
-We make AJAX requests with 
+We make AJAX requests with
 
 - [JS XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [JS Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
@@ -209,20 +206,21 @@ We make AJAX requests with
 
 [Axios Documentation](https://github.com/axios/axios)
 
-We will be using Axios for our AJAX requests.  Axios is a very popular library and we can use it in the browser and with node.
+We will be using Axios for our AJAX requests. Axios is a very popular library and we can use it in the browser and with node.
 
 ### Request
+
 - method
-    - GET
-    - POST
-    - DELETE
-    - PATCH/PUT
+  - GET
+  - POST
+  - DELETE
+  - PATCH/PUT
 - url
-    - https://swapi.co/api/people/1
-    - https://pokeapi.co/api/v2/pokemon/2
+  - https://swapi.co/api/people/1
+  - https://pokeapi.co/api/v2/pokemon/2
 - data (optional)
 
-*Get Request Example*
+_Get Request Example_
 
 ```js
 axios({
@@ -231,7 +229,7 @@ axios({
 });
 ```
 
-*Post Request Example*
+_Post Request Example_
 
 ```js
 axios({
@@ -246,22 +244,21 @@ axios({
 
 ### Response Object
 
-- *data*: the payload returned from the server. By default, Axios expects JSON and will parse this back into a JavaScript object for you.
-- *status*: the HTTP code returned from the server.
-- *statusText*: the HTTP status message returned by the server.
-
+- _data_: the payload returned from the server. By default, Axios expects JSON and will parse this back into a JavaScript object for you.
+- _status_: the HTTP code returned from the server.
+- _statusText_: the HTTP status message returned by the server.
 
 ### Error Object
 
-- *message*: the error message text.
-- *response*: the response object (if received) as described in the previous section.
-- *request*: the actual XMLHttpRequest object (when running in a browser).
+- _message_: the error message text.
+- _response_: the response object (if received) as described in the previous section.
+- _request_: the actual XMLHttpRequest object (when running in a browser).
 
 ### Handling Responses
 
-Since an AJAX call is asynchronous, we need to handle its response in a particular way.  
+Since an AJAX call is asynchronous, we need to handle its response in a particular way.
 
-You may have already used some asynchronous javascript with `setTimeout()`.  Potentially you ran into a problem with it.  
+You may have already used some asynchronous javascript with `setTimeout()`. Potentially you ran into a problem with it.
 
 [Let's take a look at how asynchronous javascript works!](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
 
@@ -271,25 +268,24 @@ To work with asynchronous javascript, we are going to use promises and a promise
 
 Remember, JavaScript is _Asynchronous_. It doesn't wait for one thing to finish before moving on to the next thing. So we must figure out a way to wait for our Axios call to finish getting all the data before we start working with it.
 
-To work with asynchronous javascript, we are going to use `promises`. 
- 
- A `promise` is a special JavaScript object that can wait for a response and `then` do something. It is a way of writing code that says 'hey, wait for me, and I _promise_ I'll send you a response soon. Then, you can do what you need to do'
+To work with asynchronous javascript, we are going to use `promises`.
+
+A `promise` is a special JavaScript object that can wait for a response and `then` do something. It is a way of writing code that says 'hey, wait for me, and I _promise_ I'll send you a response soon. Then, you can do what you need to do'
 
 After calling the initial function (in our case `axios()`), all we need to do is chain the other functions after it:
 
-- `.then()` is executed if the promise is fulfilled. 
+- `.then()` is executed if the promise is fulfilled.
 
 - `.catch()` is executed instead of `.then()` if the promise has failed in some way.
-
 
 ```js
 // Example 1
 axios({
   url: 'https://cataas.com/cat',
-  method: 'get',
+  method: 'get'
 })
-.then()
-.catch() // .then and .catch are chained at the end of the request 
+  .then()
+  .catch(); // .then and .catch are chained at the end of the request
 ```
 
 It is easier to ready if we place them on the next line
@@ -297,23 +293,23 @@ It is easier to ready if we place them on the next line
 ```js
 axios({
   url: 'https://cataas.com/cat',
-  method: 'get',
+  method: 'get'
 })
-.then() // .then wants a function to run if the request is succesful
-.catch() // .catch wants a function to run if the request is succesful
+  .then() // .then wants a function to run if the request is succesful
+  .catch(); // .catch wants a function to run if the request is failed
 ```
 
 The `.then` and `.catch` method want us to pass them functions to run.
-`.then` wants a function to run if the request succeeds 
+`.then` wants a function to run if the request succeeds
 `.catch` wants a function to run if the request fails
 
 ```js
 axios({
   url: 'https://cataas.com/cat',
-  method: 'get',
+  method: 'get'
 })
-.then(doGoodStuff) 
-.catch(doErrorStuff) 
+  .then(doGoodStuff)
+  .catch(doErrorStuff);
 ```
 
 We often use anonymous, fat arrow functions.
@@ -321,14 +317,14 @@ We often use anonymous, fat arrow functions.
 ```js
 axios({
   url: 'https://cataas.com/cat',
-  method: 'get',
+  method: 'get'
 })
-.then(() => {
+  .then(() => {
     // code for if the request succeeds
-}) 
-.catch(()=>{
+  })
+  .catch(() => {
     // code for if the request fails
-}) 
+  });
 ```
 
 `axios` will pass our functions the `response` or `error` object so that we can access the data that the API returns to us.
@@ -336,16 +332,14 @@ axios({
 ```js
 axios({
   url: 'https://cataas.com/cat',
-  method: 'get',
+  method: 'get'
 })
-.then((response) => {
+  .then(response => {
     // code for if the request succeeds
-    console.log(response)
-}) 
-.catch((error)=>{
+    console.log(response);
+  })
+  .catch(error => {
     // code for if the request fails
-    console.log(error)
-}) 
+    console.log(error);
+  });
 ```
-
-
