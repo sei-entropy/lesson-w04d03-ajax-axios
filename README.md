@@ -357,3 +357,12 @@ axios({
 - Append `https://cors-anywhere.herokuapp.com/` to the front of your api endpoint. For example: `https://cors-anywhere.herokuapp.com/https://dog.ceo.api.com/random/images`
 
 - To [Test CORS](https://webbrowsertools.com/test-cors/).
+
+### Code Along:
+
+- [Cat](examples/cat)
+- [Pokemon](examples/pokemon)
+
+### Lab:
+
+- [Movie](js/movie).
