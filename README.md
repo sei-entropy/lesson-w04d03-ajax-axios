@@ -365,4 +365,4 @@ axios({
 
 ### Lab:
 
-- [Movie](js/movie).
+- [Movie](examples/movie)
