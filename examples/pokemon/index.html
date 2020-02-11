@@ -1,35 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
     <title>Pokemon</title>
-</head>
+  </head>
 
-<body>
+  <body style="margin-left: 0px;">
     <!-- STEP 2: -->
     <!-- 1. create a p tag -->
+    <p>Pokemon 2:27</p>
+    <!-- <p id="name">NAME</p> -->
     <!-- 2. create an img tag -->
-
-
+    <!-- <img src="" alt="img" id="image" style="width: 100px;" /> -->
     <!-- STEP 3: -->
     <!-- 1. create a button tag when click on it call specific function call it get 3 pokemons -->
-    <!-- 2. create a ul have 5 li tags each one has p && img tags -->
+    <button id="get pokemon" onclick="getPokemonsAll()">GET Pokemon All</button>
+    <button id="get pokemon" onclick="getPokemons1()">GET Pokemon 1st</button>
+    <button id="get pokemon" onclick="getPokemons2()">GET Pokemon 2nd</button>
+    <button id="get pokemon" onclick="getPokemons3()">GET Pokemon 3rd</button>
 
+    <!-- 2. create a ul have 5 li tags each one has p && img tags -->
+    <ul style="width: 100%;  ">
+      <li class="item">
+        <p id="name">NAME 1</p>
+        <img src="" alt="IMAGE" id="image" style="width: 100px;" />
+      </li>
+      <li class="item">
+        <p id="name">NAME 2</p>
+        <img src="" alt="IMAGE" id="image" style="width: 100px;" />
+      </li>
+      <li class="item">
+        <p id="name">NAME 3</p>
+        <img src="" alt="IMAGE" id="image" style="width: 100px;" />
+      </li>
+      <li class="item">
+        <p id="name">NAME 4</p>
+        <img src="" alt="IMAGE" id="image" style="width: 100px;" />
+      </li>
+      <li class="item">
+        <p id="name">NAME 5</p>
+        <img src="" alt="IMAGE" id="image" style="width: 100px;" />
+      </li>
+    </ul>
+    <!-- 1. create a button tag when click on it call specific function call it get 3 pokemons -->
+    <!-- 2. create a ul have 5 li tags each one has p && img tags -->
 
     <!-- BONUS: -->
     <!-- 1. create an input tag and get the number from it -->
     <!-- 2. when click on the button you will get the number from input tag and get X pokemens -->
     <!-- 3. add more details for each pokemon -->
 
-    
     <!-- STEP 1: -->
     <!-- 1. jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
     <!-- 2. axios -->
-    <script src='main.js'></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
