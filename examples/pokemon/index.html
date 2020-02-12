@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +7,25 @@
     <link rel="stylesheet" href="style.css">
     <title>Pokemon</title>
 </head>
-
 <body>
-    <!-- STEP 2: -->
-    <!-- 1. create a p tag -->
-    <!-- 2. create an img tag -->
-
-
-    <!-- STEP 3: -->
-    <!-- 1. create a button tag when click on it call specific function call it get 3 pokemons -->
-    <!-- 2. create a ul have 5 li tags each one has p && img tags -->
-
-
-    <!-- BONUS: -->
-    <!-- 1. create an input tag and get the number from it -->
-    <!-- 2. when click on the button you will get the number from input tag and get X pokemens -->
-    <!-- 3. add more details for each pokemon -->
-
-    
+    <button onclick="getPokemons1()">GET Pokemon1</button>
+    <button onclick="getPokemons2()">GET Pokemon2</button>
+    <ol>
+        <li class='item'>
+            <p id='name-1'>NAME 1</p>
+            <img src="" alt="IMAGE" id='image-1'>
+        </li>
+        <li class='item'>
+            <p id='name-2'>NAME 2</p>
+            <img src="" alt="IMAGE" id='image-2'>
+        </li>
+    </ol>
     <!-- STEP 1: -->
     <!-- 1. jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <!-- 2. axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src='main.js'></script>
 </body>
-
 </html>

@@ -5,6 +5,42 @@ console.log('Movie');
 // STEP 1:
 // 1. search on this website and try to know how to use it https://www.themoviedb.org/movie
 // api_key=1bfa430aada4409bfa6a3c5528128e8a
+
+let objReq = {
+    method: 'get',
+    url:'http://api.themoviedb.org/3/discover/movie?api_key=1bfa430aada4409bfa6a3c5528128e8a'
+  };
+  const resCB = function(response) {
+    // console.log('SUCC', response.data);
+    // MORE CONFUSE
+    // printOneMovie(response.data.results[0]);
+    let oneMovie = response.data.results[0];
+    console.log(oneMovie);
+    let titleMovie = oneMovie.title;
+    let rateMovie = oneMovie.vote_average;
+    let descMovie = oneMovie.overview;
+    let imageMovie = oneMovie.poster_path;
+    // console.log(titleMovie)
+    // console.log(rateMovie)
+    // console.log(descMovie)
+    const titleParag=document.querySelector('.title')
+    const rateParag=document.querySelector('.rate')
+    const descParag=document.querySelector('.desc')
+    const imageImg=document.querySelector('#image')
+    titleParag.innerText=titleMovie
+    rateParag.innerText=(rateMovie*10)+'%'
+    descParag.innerText=descMovie
+    imageImg.src='https://image.tmdb.org/t/p/w500'+imageMovie
+    // from this objMovie pic two keys that really matter in any movie
+  };
+
+  const errCB=function (error) {
+    console.log('eROR', error)
+    
+  };
+  axios(objReq)
+    .then(resCB)
+    .catch(errCB);
 // STEP 1
 // 1. test the api
 // 2. change the title to be the movie title
